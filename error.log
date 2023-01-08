@@ -1,0 +1,345 @@
+
+[2023-01-07T09:35:58.868] [ERROR] error - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:4913:21)
+    at model.Query.Query.then (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5012:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at processImmediate (node:internal/timers:437:9) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5341:12),
+  valueType: 'string'
+}
+[2023-01-07T09:41:51.965] [ERROR] error - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:4913:21)
+    at model.Query.Query.then (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5012:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5341:12),
+  valueType: 'string'
+}
+[2023-01-07T09:51:23.454] [ERROR] error - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:4913:21)
+    at model.Query.Query.then (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5012:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5341:12),
+  valueType: 'string'
+}
+[2023-01-07T09:52:40.181] [ERROR] error - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:4913:21)
+    at model.Query.Query.then (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5012:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5341:12),
+  valueType: 'string'
+}
+[2023-01-07T09:55:30.103] [ERROR] error - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:4913:21)
+    at model.Query.Query.then (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5012:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5341:12),
+  valueType: 'string'
+}
+[2023-01-07T09:58:23.239] [ERROR] error - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:4913:21)
+    at model.Query.Query.then (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5012:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runNextTicks (node:internal/process/task_queues:65:3)
+    at processImmediate (node:internal/timers:437:9) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5341:12),
+  valueType: 'string'
+}
+[2023-01-07T10:00:25.124] [ERROR] error - Error: productos validation failed: codigo: Cast to Number failed for value "dwqdq" (type string) at path "codigo"
+    at ValidationError.inspect (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:790:19)
+    at inspect (node:internal/util/inspect:350:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2241:40)
+    at Object.format (node:internal/util/inspect:2098:10)
+    at basicLayout (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    codigo: CastError: Cast to Number failed for value "dwqdq" (type string) at path "codigo"
+        at SchemaNumber.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\number.js:378:11)
+        at SchemaNumber.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+        at model.$set (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\document.js:1421:22)
+        at model.$set (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\document.js:1146:16)
+        at model.Document (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\document.js:166:12)
+        at model.Model (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\model.js:122:12)
+        at new model (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\model.js:5053:15)
+        at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\model.js:3197:22
+        at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\model.js:3232:7
+        at Array.forEach (<anonymous>) {
+      stringValue: '"dwqdq"',
+      messageFormat: undefined,
+      kind: 'Number',
+      value: 'dwqdq',
+      path: 'codigo',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(!isNaN(val))
+      
+          at castNumber (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast\number.js:27:10)
+          at SchemaNumber.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\number.js:376:12)
+          at SchemaNumber.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+          at model.$set (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\document.js:1421:22)
+          at model.$set (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\document.js:1146:16)
+          at model.Document (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\document.js:166:12)
+          at model.Model (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\model.js:122:12)
+          at new model (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\model.js:5053:15)
+          at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\model.js:3197:22
+          at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\model.js:3232:7 {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'string'
+    }
+  },
+  _message: 'productos validation failed'
+}
+[2023-01-07T10:04:43.168] [ERROR] error - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:4913:21)
+    at model.Query.Query.then (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5012:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5341:12),
+  valueType: 'string'
+}
+[2023-01-07T10:09:08.591] [ERROR] error - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:4913:21)
+    at model.Query.Query.then (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5012:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5341:12),
+  valueType: 'string'
+}
+[2023-01-07T10:25:52.017] [ERROR] error - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "carritos"
+    at model.Query.exec (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:4913:21)
+    at model.Query.Query.then (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5012:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: '"undefined"',
+  kind: 'ObjectId',
+  value: 'undefined',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at ObjectId.SchemaType.applySetters (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1201:12)
+      at ObjectId.SchemaType._castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1648:15)
+      at ObjectId.SchemaType.castForQuery (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1636:15)
+      at ObjectId.SchemaType.castForQueryWrapper (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\cast.js:342:32)
+      at model.Query.Query.cast (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\mongoose\lib\query.js:5341:12),
+  valueType: 'string'
+}
+[2023-01-07T13:45:35.172] [ERROR] error - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection.login (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:444:38)
+    at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-transport\index.js:272:32
+    at SMTPConnection.<anonymous> (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:213:17)
+    at Object.onceWrapper (node:events:627:28)
+    at SMTPConnection.emit (node:events:513:28)
+    at SMTPConnection._actionEHLO (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:1325:14)
+    at SMTPConnection._processResponse (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EAUTH',
+  command: 'API'
+}
+[2023-01-07T13:51:18.798] [ERROR] error - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection.login (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:444:38)
+    at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-transport\index.js:272:32
+    at SMTPConnection.<anonymous> (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:213:17)
+    at Object.onceWrapper (node:events:627:28)
+    at SMTPConnection.emit (node:events:513:28)
+    at SMTPConnection._actionEHLO (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:1325:14)
+    at SMTPConnection._processResponse (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EAUTH',
+  command: 'API'
+}
+[2023-01-07T13:55:23.715] [ERROR] error - Error: Missing credentials for "PLAIN"
+    at SMTPConnection._formatError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection.login (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:444:38)
+    at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-transport\index.js:272:32
+    at SMTPConnection.<anonymous> (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:213:17)
+    at Object.onceWrapper (node:events:627:28)
+    at SMTPConnection.emit (node:events:513:28)
+    at SMTPConnection._actionEHLO (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:1325:14)
+    at SMTPConnection._processResponse (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EAUTH',
+  command: 'API'
+}
+[2023-01-07T14:43:08.054] [ERROR] error - Error: No recipients defined
+    at SMTPConnection._formatError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._setEnvelope (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:1007:34)
+    at SMTPConnection.send (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:621:14)
+    at sendMessage (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-transport\index.js:228:28)
+    at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-transport\index.js:286:25
+    at SMTPConnection._actionAUTHComplete (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:1556:9)
+    at SMTPConnection.<anonymous> (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EENVELOPE',
+  command: 'API'
+}
+[2023-01-07T23:41:43.865] [ERROR] error - Error: No recipients defined
+    at SMTPConnection._formatError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._setEnvelope (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:1007:34)
+    at SMTPConnection.send (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:621:14)
+    at sendMessage (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-transport\index.js:228:28)
+    at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-transport\index.js:286:25
+    at SMTPConnection._actionAUTHComplete (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:1556:9)
+    at SMTPConnection.<anonymous> (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EENVELOPE',
+  command: 'API'
+}
+[2023-01-08T00:04:24.433] [ERROR] error - Error: No recipients defined
+    at SMTPConnection._formatError (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._setEnvelope (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:1007:34)
+    at SMTPConnection.send (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:621:14)
+    at sendMessage (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-transport\index.js:228:28)
+    at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-transport\index.js:286:25
+    at SMTPConnection._actionAUTHComplete (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:1556:9)
+    at SMTPConnection.<anonymous> (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\nodemailer\lib\smtp-connection\index.js:193:44) {
+  code: 'EENVELOPE',
+  command: 'API'
+}
+[2023-01-08T00:17:48.356] [ERROR] error - Error: Required parameter "opts['to']" missing.
+    at Function.create (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\twilio\lib\rest\api\v2010\account\message.js:109:13)
+    at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\routes\ordenes.js:74:54
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)

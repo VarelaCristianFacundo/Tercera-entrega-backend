@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODER - ecommerce</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+    crossorigin="anonymous"  />
+</head>
+<body>  
+   
+    <div class="container" style="margin-top: 30px;">         
+        <header class="p-3 mb-3 border-bottom">
+            <div class="container">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                
+        
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="#" class="nav-link px-2 link-secondary"><span id="usuarioLogin"></span></a></li>
+                  <li><a href="/index.html" class="nav-link px-2 link-secondary">Home</a></li>
+                  <li><a href="#" class="nav-link px-2 link-dark" onclick="mostrarCarrito()">Mostrar Carrito</a></li>
+                  <li><a href="/ordenes.html" class="nav-link px-2 link-dark">Ordenes</a></li>
+                </ul>
+         
+        
+                <div class="dropdown text-end">
+                  <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span id="usuarioAvatar" idth="32" height="32" class="rounded-circle"></span>                  
+                  </a>
+                  <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">                     
+                    <li><a class="dropdown-item" href="/logout">Salir</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+          
+      
+       
+        <div id="formularioAlta" style="display: none;">
+            <h4 class="mt-10 text-dark">Nuevo producto</h4>
+             
+           
+
+            <div id="formularioPtos">
+            <form onsubmit="return agregarProducto()" name="formulario1">
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Codigo"  required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="stock" name="stock" placeholder="Stock" required >
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="precio" name="precio" placeholder="Precio" required>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 10px;">
+                      <div class="col">
+                        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo" required>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion" required>
+                      </div>
+                    </div>
+                    
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col">
+                            <input type="text" class="form-control" id="thumbail" name="thumbail" placeholder="Ingrese url con la imagen" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center" style="margin-top: 10px;">                       
+                        <div class="col-md-auto">
+                            <input type="submit" value="Enviar producto" class="btn btn-success" />
+                        </div>
+                    </div>
+                  </div>
+ 
+                
+            </form>
+        
+            </div>  
+        </div>
+    </div>
+
+  
+    <div class="container" style="margin-top: 30px;">
+        <h4 class="mt-10 text-dark">Productos</h4>
+        <div class="table-responsive" style="text-align: center;">
+          <table class="table table-white" id="tabla">
+            <thead>
+                <tr style="color: black"> 
+                    <th>Eliminar</th>
+                    <th>Editar</th>                     
+                    <th>Nombre</th> 
+                    <th>Descripcion</th> 
+                    <th>Precio</th> 
+                    <th>Foto</th> 
+                    <th>Stock</th> 
+                    <th>Agregar al carrito</th>                    
+                </tr>
+            </thead>
+            <tbody id="tablaProductos">
+            </tbody>
+          </table>  
+        </div>
+    </div>
+
+     
+    <div class="container" style="margin-top: 30px; visibility:visible" id="divCarrito"> 
+        <h4 class="mt-10 text-dark">Carrito</h4>
+        
+        <div class="mb-3">
+            <div class="table-responsive" style="text-align: center;">
+                <table class="table table-white">
+                    <thead>
+                        <tr> 
+                            <th>Foto</th>
+                            <th>Nombre</th>  
+                            <th>Precio</th>  
+                            <th>Borrar del carrito</th> 
+                        </tr>
+                    </thead>
+                    <tbody id="tablaCarrito"></tbody>
+                </table>  
+            </div>
+            <a a href="/ordenes.html" class="btn btn-success">Finalizar compra</a>
+        </div>
+    </div>   
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Editar producto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="return editarProducto()" name="formulario1">
+                    <input id="editarProductoID" name="prodId" type="hidden" value="">
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="tituloM" name="titulo" placeholder="Titulo del producto" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripcion</label>
+                        <input type="text" class="form-control" id="descripcionM" name="descripcion" placeholder="Descripcion del producto" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="codigo" class="form-label">Codigo</label>
+                        <input type="text" class="form-control" id="codigoM" name="codigo" placeholder="Codigo del producto" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="stock" class="form-label">Stock</label>
+                        <input type="text" class="form-control" id="stockM" name="stock" placeholder="Stock del producto" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Precio</label>
+                        <input type="text" class="form-control" id="precioM" name="precio" placeholder="Precio del producto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Thumbail</label>
+                        <input type="text" class="form-control" id="thumbailM" name="thumbail" placeholder="Ingrese la url con la imagen del pto">
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <input type="submit" value="Grabar" class="btn btn-primary" data-bs-dismiss="modal"/> 
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>    
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- MODAL BORRAR PRODUCTO -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Eliminar producto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="return borrarProducto()" name="formulario1">
+                    <input id="borrarProductoID" name="prodId" type="hidden" value="">
+                    Desea eliminar el producto?
+            </div>
+            <div class="modal-footer">
+                <input type="submit" value="Eliminar" class="btn btn-danger" data-bs-dismiss="modal"/> 
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>    
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- SCRIPTS -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

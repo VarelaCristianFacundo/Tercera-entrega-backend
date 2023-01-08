@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODER - ecommerce</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css'>
+</head>
+<body>
+    <section class="vh-200" style="background-color: #ebf2fa;">
+    <form action="/register" method="post" autocomplete="off" enctype="multipart/form-data">    
+        <div class="container h-200">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-9">
+      
+              <h1 class="text-white mb-4" style="color:black !important">Registrarse</h1>
+              
+      
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body">
+                    <div class="row align-items-center py-3">
+                        <div class="col-md-3 ps-5">      
+                          <h6 class="mb-0">Email</h6>      
+                        </div>
+                        <div class="col-md-9 pe-5">      
+                          <input  id="username" name="username" type="text" class="form-control form-control-lg" placeholder="example@example.com" required/>      
+                        </div>
+                    </div>
+                    <hr class="mx-n3">
+                    <div class="row align-items-center pt-4 pb-3">
+                        <div class="col-md-3 ps-5">      
+                        <h6 class="mb-0">Password</h6>      
+                        </div>
+                        <div class="col-md-9 pe-5">      
+                        <input id="password" name="password" type="text" class="form-control form-control-lg" required/>      
+                        </div>
+                    </div>      
+                    <hr class="mx-n3">
+                    <div class="row align-items-center pt-4 pb-3">
+                        <div class="col-md-3 ps-5">      
+                        <h6 class="mb-0">Nombre</h6>      
+                        </div>
+                        <div class="col-md-9 pe-5">      
+                        <input id="nombre" name="nombre" type="text" class="form-control form-control-lg" required/>      
+                        </div>
+                    </div>      
+                    <hr class="mx-n3">
+                    <div class="row align-items-center pt-4 pb-3">
+                        <div class="col-md-3 ps-5">      
+                        <h6 class="mb-0">Direccion</h6>      
+                        </div>
+                        <div class="col-md-9 pe-5">      
+                        <input id="direccion" name="direccion" type="text" class="form-control form-control-lg" required/>      
+                        </div>
+                    </div>      
+                    <hr class="mx-n3">
+                    <div class="row align-items-center pt-4 pb-3">
+                        <div class="col-md-3 ps-5">      
+                        <h6 class="mb-0">Edad</h6>      
+                        </div>
+                        <div class="col-md-9 pe-5">      
+                        <input id="edad" name="edad" type="text" class="form-control form-control-lg" required/>      
+                        </div>
+                    </div>      
+                    <hr class="mx-n3">
+                    <div class="row align-items-center pt-4 pb-3">
+                        <div class="col-md-3 ps-5">      
+                        <h6 class="mb-0">Telefono</h6>      
+                        </div>
+                        <div class="col-md-9 pe-5">      
+                        <input id="telefono" name="telefono"  type="text" class="form-control form-control-lg" required/>      
+                        </div>
+                    </div>      
+                    <hr class="mx-n3">
+      
+                  
+      
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Avatar</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input class="form-control form-control-lg" id="avatar" name="avatar" type="file" />
+                      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="px-5 py-4">
+                    <button type="submit" class="btn btn-primary btn-lg">Registrarse</button>
+
+                   
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+        </form>
+       
+      </section>
+
+    <!--<div class="container mt-3">
+            <h1>Registro de Usuario</h1>
+            <br>
+            <form action="/register" method="post" autocomplete="off" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="username">Ingrese su email</label>
+                    <input id="username" class="form-control" type="text" name="username" required>
+                    <label for="password">Ingrese su password</label>
+                    <input id="password" class="form-control" type="password" name="password" required>
+                    <label for="nombre">Ingrese su nombre</label>
+                    <input id="nombre" class="form-control" type="text" name="nombre" required>
+                    <label for="nombre">Ingrese su direccion</label>
+                    <input id="direccion" class="form-control" type="text" name="direccion" required>
+                    <label for="nombre">Ingrese su edad</label>
+                    <input id="edad" class="form-control" type="number" name="edad" required>
+                    <label for="nombre">Ingrese su telefono</label>
+                    <input id="telefono" class="form-control" type="text" name="telefono" required>
+                    <label for="nombre">Subi tu avatar</label>
+                    <input id="avatar" class="form-control" type="file" name="avatar">
+                </div>
+                <button class="btn btn-success mt-3">Registro</button>
+            </form>
+            <a class="btn btn-primary mt-3" href="/login.html">Ir al Login</a>
+    </div>-->
+</body>
+</html>
