@@ -79,12 +79,12 @@ router.post("/:idCarrito", middlewares.isRegister, async (req, res) => {
         to: process.env.SMS_TO
       })
 
-    //   const wasap = {
-    //     body: "Productos: " + JSON.stringify(productos, null, 2),
-    //     from: process.env.WSP_FROM,
-    //     to: process.env.WSP_TO //req.user.telefono -> pero no manda porque no se como registrar todos los cel de ante mano
-    //   };
-    //  const messageWSP = await twilioConfig.messages.create(wasap);
+      const wasap = {
+        body: "Productos: " + JSON.stringify(productos, null, 2),
+        from: process.env.WSP_FROM,
+        to: process.env.WSP_TO
+      };
+     const messageWSP = await twilioConfig.messages.create(wasap);
       
       
 
