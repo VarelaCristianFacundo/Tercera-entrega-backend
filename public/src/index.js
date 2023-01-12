@@ -1,5 +1,6 @@
 const socket = io();
 let idCarrito ="";
+let idProd=0;
 
 function cargarLogin(){
     
@@ -185,7 +186,7 @@ function editarProducto() {
         precio: document.getElementById('precioM').value,
         stock: document.getElementById('stockM').value
     }  
-        
+    console.log(idProd);
     let request = {
         method: 'PUT',
         body: JSON.stringify(data),
@@ -194,7 +195,7 @@ function editarProducto() {
             }
     }
     
-    fetch( `/api/productos/${editarProductoID}`, request)
+    fetch(`/api/productos/${idProd}`, request)
     .then(function() {        
         socket.emit("actualizacion");
     });
@@ -338,7 +339,7 @@ myModal.addEventListener('shown.bs.modal', function (event) {
   let button = event.relatedTarget;
   
   let id = button.getAttribute('data-bs-id');
-
+    idProd = id;
   let modalBodyInput = exampleModal.querySelector('.modal-body input')
   
   let inId = document.getElementById('idM');
@@ -376,7 +377,7 @@ myModal2.addEventListener('shown.bs.modal', function (event) {
     let button = event.relatedTarget;
      
     let id = button.getAttribute('data-bs-id');
-  
+    idProd = id;
     let modalBodyInput = exampleModal.querySelector('.modal-body input')
   
     let inId = document.getElementById('borrarProductoID');
