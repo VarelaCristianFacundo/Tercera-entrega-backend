@@ -22,7 +22,7 @@ app.use(session({
   rolling:true
 }))
  
-//Midelware
+//Midelwares
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/public/views'))
 app.use(express.json()); // body-parser

@@ -17,4 +17,4 @@ class ProductosDaoMongoDb extends ContenedorMongoDB {
     }
 }
 
-module.exports = ProductosDaoMongoDb
+module.exports=ProductosDaoMongoDb

@@ -38,7 +38,6 @@ router.post("/", async (req, res) => {
  
 router.post("/:idCarrito/:idPto", middlewares.isRegister, async (req, res) => {
   try {
-   
     let ptoId = await productos.getById(req.params.idPto);
   
     if (Object.keys(ptoId).length != 0) {
@@ -46,7 +45,6 @@ router.post("/:idCarrito/:idPto", middlewares.isRegister, async (req, res) => {
       let carrito = await carros.getById(req.params.idCarrito);
       
       if (carrito) {
-         
         carrito.productos.push(ptoId);
         carros.update(carrito);
         res.send({ carrito });

@@ -52,7 +52,7 @@ class ContenedorMongoDB {
   }
 
   async getById(num) {
-         try {
+        try {
       let docs = false;
       docs = await this.coleccion.findOne({ _id: num }, { __v: 0 });
       if (docs) {

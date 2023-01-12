@@ -14,4 +14,4 @@ router.post("/", upload.single('avatar'), passportConfig.authenticate("local-sig
 }))
 
  
-module.exports = router;
+module.exports=router;

@@ -14,4 +14,4 @@ class OrdenesDaoMongoDb extends ContenedorMongoDB {
     }
 }
 
-module.exports = OrdenesDaoMongoDb
+module.exports=OrdenesDaoMongoDb

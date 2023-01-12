@@ -27,7 +27,7 @@ function darFecha() {
     fecha.getSeconds();
   return fechaOK;
 }
- 
+
 router.get("/", async (req, res) => {
   try {
     let aux = await productos.getAll();
@@ -37,7 +37,6 @@ router.get("/", async (req, res) => {
   }
 });
 
- 
 router.get("/:id", async (req, res) => {
   try {
     let ptoId = await productos.getById(req.params.id);
@@ -46,7 +45,7 @@ router.get("/:id", async (req, res) => {
     
       res.send(ptoId);
     } else {
-       
+  
       res.status(400);
       res.send({ error: "producto no encontrado" });
     }
@@ -56,7 +55,6 @@ router.get("/:id", async (req, res) => {
   }
 });
 
- 
 router.post("/", middlewares.isAdmin, async (req, res) => {
   try {
     
@@ -77,7 +75,7 @@ router.post("/", middlewares.isAdmin, async (req, res) => {
     throw Error("Error en post productos");
   }
 });
- 
+
 router.put("/:id", middlewares.isAdmin, async (req, res) => {
   try {
     
@@ -92,14 +90,14 @@ router.put("/:id", middlewares.isAdmin, async (req, res) => {
       precio,
       stock,
     };
-   
+
     let flag = await productos.getById(req.params.id);
     if (Object.keys(flag).length != 0) {
-     
+  
       await productos.update(ptoMod);
       res.send(ptoMod);
     } else {
-     
+    
       res.status(400);
       res.send({ error: "no se encontro el producto" });
     }
@@ -108,10 +106,10 @@ router.put("/:id", middlewares.isAdmin, async (req, res) => {
     throw Error("Error en put modificacion productos");
   }
 });
- 
+
 router.delete("/:id", middlewares.isAdmin, async (req, res) => {
   try {
-   
+  
     let flag = await productos.getById(req.params.id);
 
     if (Object.keys(flag).length != 0) {    
@@ -127,5 +125,5 @@ router.delete("/:id", middlewares.isAdmin, async (req, res) => {
   }
 });
 
- 
-module.exports = router;
+
+module.exports=router;

@@ -45,4 +45,4 @@ class UsuariosDaoMongoDb extends ContenedorMongoDB {
     }
 }
 
-module.exports = UsuariosDaoMongoDb
+module.exports=UsuariosDaoMongoDb
