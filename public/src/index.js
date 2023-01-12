@@ -127,7 +127,12 @@ function armarProductos(isAdmin){
             fila.appendChild(iStock);
 
             let iAgregar = document.createElement('td');
-            iAgregar.innerHTML = `<a href="javascript:agregarProductoCarrito('${pto.id}')" class="btn btn-success">Agregar al carrito</a>`;
+            if (isAdmin == "true"){
+                iAgregar.innerHTML = "";
+            }else{
+                iAgregar.innerHTML = `<a href="javascript:agregarProductoCarrito('${pto.id}')" class="btn btn-success">Agregar al carrito</a>`;
+            }
+            // iAgregar.innerHTML = `<a href="javascript:agregarProductoCarrito('${pto.id}')" class="btn btn-success">Agregar al carrito</a>`;
             fila.appendChild(iAgregar);
             
             tabla.appendChild(fila);
