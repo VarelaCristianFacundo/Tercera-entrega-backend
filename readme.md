@@ -3,15 +3,16 @@
 ## VARIABLES .env
 
 ###     
-    BASEDATOS = "mongodb"
-    MONGO_CONEXION = ""
-    SESSION_SECRET = "" 
-
-    
-    TWILIO_SID = ""
-    TWILIO_TOKEN = ""
-
-    NODEMMAILER_USER = ""
-    NODEMAILER_PASS = "
-
+BASEDATOS="mongodb"
+MONGO_CONEXION=""
+SESSION_SECRET="" 
+TWILIO_SID=""
+TWILIO_TOKEN=""
+NODEMMAILER_USER=""
+NODEMAILER_PASS=""
+SMS_FROM=""
+SMS_TO=""
+AVISO_EMAIL=""
+WSP_FROM=""
+WSP_TO=""
     
