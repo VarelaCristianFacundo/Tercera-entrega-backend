@@ -1,13 +1,13 @@
 const express = require("express");
-const Daos = require("../src/daos/configDb");
-const middlewares = require("../src/middlewares/middlewares");
+const Daos = require("../daos/configDb");
+const middlewares = require("../middlewares/middlewares");
 
 const router = express.Router();
 
 let productos = Daos.productos;
 
 //Logs
-const logs = require("../src/logs/loggers");
+const logs = require("../logs/loggers");
 const loggerConsola = logs.getLogger("consola");
 const loggerError = logs.getLogger("error");
 

@@ -37,21 +37,21 @@ app.use((req, res, next) => {
 });
 
  //ROUTES
-const produtosRoute = require("./routes/productos");
+const produtosRoute = require("./src/routes/productos");
 app.use("/api/productos", produtosRoute);
 
-const carritoRoute = require("./routes/carrito");
+const carritoRoute = require("./src/routes/carrito");
 app.use("/api/carrito", carritoRoute);
-const register = require("./routes/register");
+const register = require("./src/routes/register");
 app.use("/register", register);
 
-const login = require("./routes/login");
+const login = require("./src/routes/login");
 app.use("/login", login);
 
-const logout = require("./routes/logout");
+const logout = require("./src/routes/logout");
 app.use("/logout", logout);
 
-const ordenes = require("./routes/ordenes");
+const ordenes = require("./src/routes/ordenes");
 app.use("/api/ordenes", ordenes)
 
 app.use((req, res, next) => {

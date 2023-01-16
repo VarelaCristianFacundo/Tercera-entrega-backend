@@ -1,5 +1,5 @@
 const express = require("express");
-const passportConfig = require("../src/passport/passportConfig")
+const passportConfig = require("../passport/passportConfig")
 
 const app = express();
 const { Router } = express;

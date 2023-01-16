@@ -1,13 +1,13 @@
 const express = require("express");
-const Daos = require("../src/daos/configDb");
-const nodemailerConfig = require("../src/nodemailer-twilio/nodemailerConfig");
-const twilioConfig = require("../src/nodemailer-twilio/twilioConfig")
-const middlewares = require("../src/middlewares/middlewares");
+const Daos = require("../daos/configDb");
+const nodemailerConfig = require("../nodemailer-twilio/nodemailerConfig");
+const twilioConfig = require("../nodemailer-twilio/twilioConfig")
+const middlewares = require("../middlewares/middlewares");
 
 const router = express.Router();
 
 //Logs
-const logs = require("../src/logs/loggers");
+const logs = require("../logs/loggers");
 const loggerConsola = logs.getLogger("consola");
 const loggerError = logs.getLogger("error");
 

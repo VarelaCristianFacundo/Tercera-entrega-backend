@@ -5,7 +5,7 @@ const upload = multer({ dest: 'public/avatars/' })
 const app = express();
 const { Router } = express;
 const router = new Router();
-const passportConfig = require("../src/passport/passportConfig")
+const passportConfig = require("../passport/passportConfig")
 
  
 router.post("/", upload.single('avatar'), passportConfig.authenticate("local-signup",{
