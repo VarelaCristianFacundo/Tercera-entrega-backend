@@ -387,3 +387,14 @@
   code: 'ETIMEDOUT',
   command: 'CONN'
 }
+[2023-01-17T20:27:52.257] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'getById')
+    at getPublicChatService (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\src\services\chatService.js:17:34)
+    at getPublicChat (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\src\controllers\chatController.js:15:30)
+    at Layer.handle [as handle_request] (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\route.js:144:13)
+    at isRegister (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\src\middlewares\middlewares.js:18:13)
+    at Layer.handle [as handle_request] (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\index.js:284:15

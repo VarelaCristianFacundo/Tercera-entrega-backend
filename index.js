@@ -68,11 +68,18 @@ const { Server } = require("socket.io");
 const { logger } = require("./src/nodemailer-twilio/nodemailerConfig");
 const io = new Server(server);
 
+const Mensajes = [];
+
 io.on("connection", (socket)=> {
   socket.emit("render", "")
   socket.on("actualizacion", ()=>{
     io.sockets.emit("render", "")
   })
+  socket.on('mensaje', (data)=>{
+    console.log(data);
+    Mensajes.push({socketid: socket.id, mensaje: data})
+    io.sockets.emit('ListaMensajes', Mensajes)}
+  )
 })
 
 //SERVER
