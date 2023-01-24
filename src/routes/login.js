@@ -1,22 +1,16 @@
-const express = require("express");
-const passportConfig = require("../passport/passportConfig")
+const { Router } = require ('express');
+const passportConfig = require("../configs/passportConfig")
+const {getUser} = require("../controllers/loginController")
 
-const app = express();
-const { Router } = express;
 const router = new Router();
 
-router.get("/", (req, res) => {
-  if (req.user){
-    res.send({user: req.user.email, avatar: req.user.avatar, carrito:req.user.carrito, isAdmin:req.user.isAdmin})
-  } else{
-    res.send(false)
-  }
-});
+router.get("/", getUser);  
 
 router.post("/", passportConfig.authenticate("local-login",{
-  successRedirect:"/index.html",
+  successRedirect:"/productos.html",
   failureRedirect:"/loginError.html"
-}))
+}))  
+
 
 module.exports = router;
 

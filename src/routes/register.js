@@ -1,17 +1,14 @@
-const express = require("express");
+const { Router } = require('express');
 const multer  = require('multer')
 const upload = multer({ dest: 'public/avatars/' })
 
-const app = express();
-const { Router } = express;
+
 const router = new Router();
-const passportConfig = require("../passport/passportConfig")
+const passportConfig = require("../configs/passportConfig")
 
- 
 router.post("/", upload.single('avatar'), passportConfig.authenticate("local-signup",{
-    successRedirect:"/login.html",
+    successRedirect:"/",
     failureRedirect:"/registroError.html"
-}))
+}))  
 
- 
-module.exports=router;
+module.exports = router;
