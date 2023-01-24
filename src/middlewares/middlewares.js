@@ -5,7 +5,7 @@ module.exports = {
         }else{
             if(req.user.isAdmin){
                 next()
-            }else {
+            } else {
                 res.status(403);
                 res.send({error: -1, descripcion: `ruta ${req.originalUrl} metodo ${req.method} no autorizada`});
             }
@@ -13,6 +13,7 @@ module.exports = {
     },
     isRegister: function(req,res,next){
         if (req.user === undefined){
+            res.status(403);
             res.redirect("/login.html")
         } else {
             next();

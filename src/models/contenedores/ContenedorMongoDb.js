@@ -1,38 +1,26 @@
 const mongoose = require("mongoose");
-const dotenv = require("dotenv").config();
+const {asPOJO, renameField, removeField} = require("../../helpers/helpersMongo")
+const ENV = require('../../configs/enviromentConfig')
 
- 
-const logs = require("../logs/loggers");
+//Logs
+const logs = require("../../logs/loggers");
 const loggerConsola = logs.getLogger("consola");
 const loggerError = logs.getLogger("error");
 
- 
-const toParseObject = (obj) => JSON.parse(JSON.stringify(obj));
-
-const renameField = (record, from, to) => {
-  record[to] = record[from];
-  delete record[from];
-  return record;
-};
-const removeField = (record, field) => {
-  const value = record[field];
-  delete record[field];
-  return value;
-};
-
-//Conecto a Mongo
-const conectarMongo = () => { 
-  mongoose.connect(process.env.MONGO_CONEXION);
+//Conexion a la base de datos
+const connectDb = () => {
+  const conexion = ENV.dbString
+  mongoose.connect(conexion);
   mongoose.connection.on("open", () => {
-    loggerConsola.info("Conectado a MongoDB")
+    loggerConsola.info("Base de datos conectada con exito!!");
   });
   mongoose.connection.on("error", () => {
-    loggerError.error("Error conectado a MongoDB")
+    loggerError.error("Error al conectarse a la base de datos!!");
   });
 };
+connectDb();
 
-conectarMongo();
- 
+//Comienzo clase Contenedor
 class ContenedorMongoDB {
   constructor(name, esquema) {
     this.coleccion = mongoose.model(name, esquema);
@@ -41,28 +29,29 @@ class ContenedorMongoDB {
   async save(nuevoElem) {
     try {
       let doc = await this.coleccion.create(nuevoElem);
-      doc = toParseObject(doc);
+      doc = asPOJO(doc);
       renameField(doc, "_id", "id");
       removeField(doc, "__v");
       return doc;
     } catch (error) {
-      loggerError.error(error)
+      loggerError.error(error);
       throw Error("Error en el save");
     }
   }
 
   async getById(num) {
-        try {
+    try {
       let docs = false;
+      console.log(num)
       docs = await this.coleccion.findOne({ _id: num }, { __v: 0 });
       if (docs) {
-        const result = renameField(toParseObject(docs), "_id", "id");
+        const result = renameField(asPOJO(docs), "_id", "id");
         return result;
       } else {
         return false;
       }
     } catch (error) {
-      loggerError.error(error)
+      loggerError.error(error);
       throw Error("Error en el getById");
     }
   }
@@ -70,11 +59,11 @@ class ContenedorMongoDB {
   async getAll() {
     try {
       let docs = await this.coleccion.find({}, { __v: 0 }).lean();
-      docs = docs.map(toParseObject);
+      docs = docs.map(asPOJO);
       docs = docs.map((d) => renameField(d, "_id", "id"));
       return docs;
     } catch (error) {
-      loggerError.error(error)
+      loggerError.error(error);
       throw Error("Error en el getAll");
     }
   }
@@ -88,7 +77,7 @@ class ContenedorMongoDB {
         return { err: "Error en item, id no encontrado" };
       }
     } catch (error) {
-      loggerError.error(error)
+      loggerError.error(error);
       throw Error("Error en el deleteById");
     }
   }
@@ -98,27 +87,24 @@ class ContenedorMongoDB {
       await this.coleccion.deleteMany({});
       return { msg: "Todos los productos borrados" };
     } catch (error) {
-      loggerError.error(error)
+      loggerError.error(error);
       throw Error("Error en el deleteAll()");
     }
   }
 
-  async update(nuevoElem) {
+  async update( nuevoElem) {
     try {
       renameField(nuevoElem, "id", "_id");
-      const { n, nModified } = await this.coleccion.replaceOne(
-        { _id: nuevoElem._id },
-        nuevoElem
-      );
+      const { n, nModified } = await this.coleccion.replaceOne( { _id: nuevoElem._id },  nuevoElem );      
       if (n == 0 || nModified == 0) {
         throw new Error("Error al actualizar: no encontrado");
       } else {
         renameField(nuevoElem, "_id", "id");
         removeField(nuevoElem, "__v");
-        return toParseObject(nuevoElem);
+        return asPOJO(nuevoElem);
       }
     } catch (error) {
-      loggerError.error(error)
+      loggerError.error(error);
       throw Error("Error en el update");
     }
   }
