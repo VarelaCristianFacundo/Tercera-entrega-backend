@@ -1,5 +1,5 @@
 const { darFecha } = require("../helpers/helpersFecha");
-const Daos = require("../daos/configDb");
+const Daos = require("../models/daos/factoryDb");
 
 //Clase contenedora de chats y usuarios
 let chats = Daos.chats;
@@ -10,7 +10,7 @@ const logs = require("../logs/loggers");
 const loggerError = logs.getLogger("error");
 
 //Chat general
-const idChatGral = "62cd919d315a00bfa0171ee2";
+const idChatGral = "63c96f0bfe2bcb1ed087c332";
 
 const getPublicChatService = async () => {
   try {
