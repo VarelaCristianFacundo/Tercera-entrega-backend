@@ -2,14 +2,14 @@ const ContenedorMongoDB = require ("../../contenedores/ContenedorMongoDb");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-class CarritoDaoMongoDb extends ContenedorMongoDB {
+class ChatsDaoMongoDb extends ContenedorMongoDB {
 
     constructor() {
-        super('carritos', new Schema({
+        super('chats', new Schema({
             timestamp: {type: String, required: true},
-            productos: {type: Array, required: true},
+            messages : {type: Array, required: true, default:[]}
         }));
     }
 }
 
-module.exports = CarritoDaoMongoDb
+module.exports = ChatsDaoMongoDb
