@@ -40,8 +40,7 @@ if (MODO == "CLUSTER" && cluster.isMaster) {
   app.use(
     session({
       cookie: { maxAge: 600000 },
-      // secret: `${process.env.SESSION_SECRET}`,
-      secret: "dalerojo",
+      secret: `${process.env.SESSION_SECRET}`,
       resave: false,
       saveUninitialized: false,
       rolling: true,
@@ -50,20 +49,7 @@ if (MODO == "CLUSTER" && cluster.isMaster) {
   app.use(passport.initialize());
   app.use(passport.session());
 
-  //Routes
-  const produtosRoute = require("./src/routes/productos");
-  app.use("/api/productos", produtosRoute);
-  const carritoRoute = require("./src/routes/carrito");
-  app.use("/api/carrito", carritoRoute);
-  const register = require("./src/routes/register");
-  app.use("/register", register);
-  const login = require("./src/routes/login");
-  app.use("/login", login);
-  const logout = require("./src/routes/logout");
-  app.use("/logout", logout);
-  const ordenes = require("./src/routes/ordenes");
-  app.use("/api/ordenes", ordenes);
-
+  //Routes 
 
 
   app.get('/primo', (req, res) => {
