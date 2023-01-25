@@ -1,6 +1,5 @@
 const socket = io();
 let idCarrito ="";
-let idProd=0;
 
 function cargarLogin(){
     
@@ -127,12 +126,7 @@ function armarProductos(isAdmin){
             fila.appendChild(iStock);
 
             let iAgregar = document.createElement('td');
-            if (isAdmin == "true"){
-                iAgregar.innerHTML = "";
-            }else{
-                iAgregar.innerHTML = `<a href="javascript:agregarProductoCarrito('${pto.id}')" class="btn btn-success">Agregar al carrito</a>`;
-            }
-            // iAgregar.innerHTML = `<a href="javascript:agregarProductoCarrito('${pto.id}')" class="btn btn-success">Agregar al carrito</a>`;
+            iAgregar.innerHTML = `<a href="javascript:agregarProductoCarrito('${pto.id}')" class="btn btn-success">Agregar al carrito</a>`;
             fila.appendChild(iAgregar);
             
             tabla.appendChild(fila);
@@ -148,9 +142,9 @@ function armarProductos(isAdmin){
 function agregarProducto(){
     
     let data = {
+        categoria: document.getElementById('categoria').value,
         nombre: document.getElementById('titulo').value,
-        descripcion: document.getElementById('descripcion').value,
-        codigo: document.getElementById('codigo').value,
+        descripcion: document.getElementById('descripcion').value,        
         thumbail: document.getElementById('thumbail').value,
         precio: document.getElementById('precio').value,
         stock: document.getElementById('stock').value
@@ -169,9 +163,9 @@ function agregarProducto(){
         socket.emit("actualizacion");
     });
 
-   document.getElementById('titulo').value = ''
-   document.getElementById('descripcion').value= ''
-   document.getElementById('codigo').value= ''
+    document.getElementById('categoria').value = ''
+    document.getElementById('titulo').value = ''
+   document.getElementById('descripcion').value= ''   
    document.getElementById('thumbail').value= ''
    document.getElementById('precio').value= ''
    document.getElementById('stock').value= ''
@@ -179,19 +173,20 @@ function agregarProducto(){
     return false;
 }
 
+ 
+
 function editarProducto() {
-  
-    let editarProductoID = document.getElementById('editarProductoID').value;
-    
+    let inId = document.getElementById('editarProductoID').value;
+     
+    const url = `/api/productos/${inId}`; 
     let data = {
         nombre: document.getElementById('tituloM').value,
         descripcion: document.getElementById('descripcionM').value,
-        codigo: document.getElementById('codigoM').value,
+        categoria: document.getElementById('categoriaM').value,
         thumbail: document.getElementById('thumbailM').value,
         precio: document.getElementById('precioM').value,
         stock: document.getElementById('stockM').value
-    }  
-    console.log(idProd);
+    }    
     let request = {
         method: 'PUT',
         body: JSON.stringify(data),
@@ -199,14 +194,16 @@ function editarProducto() {
             'Content-Type': 'application/json'
             }
     }
-    
-    fetch(`/api/productos/${idProd}`, request)
-    .then(function() {        
+     
+   fetch(`/api/productos/${inId}`, request)
+    .then(function(res) {       
         socket.emit("actualizacion");
+    })
+    .catch(function(error) {
+        console.log(error);
     });
   
     return false;
-    
 }
 
 function borrarProducto() {   
@@ -344,18 +341,18 @@ myModal.addEventListener('shown.bs.modal', function (event) {
   let button = event.relatedTarget;
   
   let id = button.getAttribute('data-bs-id');
-    idProd = id;
+
   let modalBodyInput = exampleModal.querySelector('.modal-body input')
   
-  let inId = document.getElementById('idM');
+  let inId = document.getElementById('editarProductoID');
+  let inCategoria = document.getElementById('categoriaM');
   let inTitulo = document.getElementById('tituloM');
-  let inDescripcion = document.getElementById('descripcionM');
-  let inCodigo = document.getElementById('codigoM');
+  let inDescripcion = document.getElementById('descripcionM');  
   let inThumbail = document.getElementById('thumbailM');
   let inPrecio = document.getElementById('precioM');
   let inStock = document.getElementById('stockM');
    
-    const url = '/api/productos/'+id;
+    const url = '/api/productos/id/'+id;
     let request = {
         method: 'GET',
         headers: {
@@ -366,10 +363,10 @@ myModal.addEventListener('shown.bs.modal', function (event) {
     fetch(url, request)
     .then((resp) => resp.json())
     .then(function(data) {
-       
+        editarProductoID.value = data.id;
+        inCategoria.value = (data.categoria);
         inTitulo.value = (data.nombre);
-        inDescripcion.value = (data.descripcion);
-        inCodigo.value = (data.codigo);
+        inDescripcion.value = (data.descripcion);        
         inThumbail.value = (data.thumbail);
         inPrecio.value = (data.precio);
         inStock.value = (data.stock);
@@ -381,24 +378,8 @@ myModal.addEventListener('shown.bs.modal', function (event) {
 myModal2.addEventListener('shown.bs.modal', function (event) {
     let button = event.relatedTarget;
      
-    let id = button.getAttribute('data-bs-id');
-    idProd = id;
-    let modalBodyInput = exampleModal.querySelector('.modal-body input')
-  
-    let inId = document.getElementById('borrarProductoID');
+    let id = button.getAttribute('data-bs-id');    
+    document.getElementById('borrarProductoID').value = id;
+
      
-      const url = '/api/productos/'+id;
-      let request = {
-          method: 'GET',
-          headers: {
-              'Content-Type': 'application/json'
-            }
-      }
-   
-      fetch(url, request)
-      .then((resp) => resp.json())
-      .then(function(data) {         
-          inId.value = (data.id);
-      });
-  
   })

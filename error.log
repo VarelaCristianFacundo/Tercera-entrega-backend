@@ -398,3 +398,5 @@
     at Route.dispatch (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\route.js:114:3)
     at Layer.handle [as handle_request] (C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\layer.js:95:5)
     at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\index.js:284:15
+[2023-01-24T20:00:00.983] [ERROR] error - Error al conectarse a la base de datos!!
+[2023-01-24T20:05:13.259] [ERROR] error - Error al conectarse a la base de datos!!

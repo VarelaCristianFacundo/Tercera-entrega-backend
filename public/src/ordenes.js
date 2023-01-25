@@ -28,6 +28,7 @@ function cargarLogin(){
         console.log(error);
       });
     
+  
 }
 
 socket.on("render", (data)=>{
@@ -52,15 +53,18 @@ socket.on("render", (data)=>{
  
 })
 
+ 
+ 
 
 function armarCarrito(){
     const tabla = document.getElementById('tablaCarrito');
     const url = `/api/carrito/${idCarrito}`
 
+     
     fetch(url)
     .then((resp) => resp.json())
     .then(function(data) {
-    
+      
         tabla.innerHTML="";
         for (const pto of data) {
             let fila = document.createElement('tr');
@@ -76,47 +80,72 @@ function armarCarrito(){
             let iPrecio = document.createElement('td');
             iPrecio.innerHTML = `$ ${pto.precio}`;     
             fila.appendChild(iPrecio);
-            
+                  
             let iBorrar = document.createElement('td');
             iBorrar.innerHTML = `<a href="javascript:borrarProductoCarrito('${pto.id}')" class="btn btn-danger">Borrar</a>`;
             fila.appendChild(iBorrar);
-        
+           
             tabla.appendChild(fila);
         }
         
     })
     .catch(function(error) {
-        console.log(error);
+      console.log(error);
     });
     return false;
 }
+
+ 
+
+ 
 
 function borrarProductoCarrito(id) {       
     let request = {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
-        }
+          }
     }
     fetch(`/api/carrito/${idCarrito}/${id}`, request)
     .then(function() {        
         socket.emit("actualizacion");
     });
 }
+  
 
 function comprarCarrito(){
-    
+    const dir = document.getElementById("direccion");
+    let data = {
+        direccion : document.getElementById("direccion").value
+    }
+      
+    console.log (data)
+    console.log (idCarrito)
     let request = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
-        }
+          },
+          body: JSON.stringify(data)
     }
     fetch(`/api/ordenes/${idCarrito}`, request)
-    .then(function() {
-        alert("Gracias!");
-        window.location.href = "index.html"
-    });
+    .then(function() {         
+        swal({
+            title: "¡Gracias!",
+            text: "Tu compra fue confirmada",
+            icon: "success",
+            button: "Cerrar",
+          })
+          .then((value) => {
+            window.location.href = "index.html"
+          });
+          
+        //window.location.href = "index.html"
+    })
+    .catch(function(error) {
+        console.log(error);
+    }); 
+      
 }
 
 function logout(){
@@ -142,7 +171,8 @@ function logout(){
     })
     .catch(function(error) {
         console.log(error);
-    });
+      });
 
 
 }
+ 
