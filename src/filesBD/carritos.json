@@ -1,0 +1,15 @@
+[{
+    "_id": {
+      "$oid": "xxxxx1"
+    },
+    "timestamp": "28/2 - 22:18:22",
+    "productos": [],
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "xxxxxx2"
+    },
+    "timestamp": "28/2 - 22:18:23",
+    "productos": [],
+    "__v": 0
+  }]

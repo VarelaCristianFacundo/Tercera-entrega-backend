@@ -1,0 +1,13 @@
+[{
+    "_id": {
+      "$oid": "63b97126c0958c18b0b05dbd"
+    },
+    "timestamp": "28/2 - 18:1:4",
+    "nombre": "Coca Cola",
+    "descripcion": "Zero",
+    "categoria": "Gaseosas",
+    "thumbail": "https://w7.pngwing.com/pngs/574/913/png-transparent-coca-cola-coca-cola-bottle-glass-bottles.png",
+    "precio": 666.66,
+    "stock": 10,
+    "__v": 0
+  }]

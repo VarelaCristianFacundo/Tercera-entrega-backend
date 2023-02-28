@@ -1,0 +1,37 @@
+[{
+    "_id": {
+      "$oid": "63c96bfb4678cb6d6d8a4880"
+    },
+    "email": "ff@ff.ff",
+    "password": "$2b$10$RvdaDs3SGqtq1XrrB22lv.LJF.X6mSAyFNKMmqorEOawSWW2n7Nii",
+    "nombre": "ff",
+    "apellido": "ff",
+    "telefono": "1123452345",
+    "avatar": "574eeae286568b22930edc92e574c697.png",
+    "isAdmin": true,
+    "carrito": {
+      "$oid": "xxxx"
+    },
+    "chat": {
+      "$oid": "xxxx"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "63c96ce6c8c83469ab8ebc2d"
+    },
+    "email": "gg@gg.gg",
+    "password": "$2b$10$sNM2IH6.4PWhrkoRyvY8OefBc4oVRU8Geo65/BBfDTZLXlr4aefTK",
+    "nombre": "gg",
+    "apellido": "gg",
+    "telefono": "1123452345",
+    "avatar": "4537b0ae44d4a4fb7111cd0ace1076d2.png",
+    "isAdmin": false,
+    "carrito": {
+      "$oid": "xxxx"
+    },
+    "chat": {
+      "$oid": "xxxx"
+    },
+    "__v": 0
+  }]
