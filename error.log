@@ -400,3 +400,132 @@
     at C:\Users\Facu\Desktop\coderBackend\CODER_BackEnd_Proyecto_3raEntrega-main\node_modules\express\lib\router\index.js:284:15
 [2023-01-24T20:00:00.983] [ERROR] error - Error al conectarse a la base de datos!!
 [2023-01-24T20:05:13.259] [ERROR] error - Error al conectarse a la base de datos!!
+[2023-02-28T11:25:05.308] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:1542:34)
+    at SMTPConnection.<anonymous> (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:193:44)
+    at TLSSocket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-02-28T11:25:59.298] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:1542:34)
+    at SMTPConnection.<anonymous> (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:193:44)
+    at TLSSocket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-02-28T11:31:40.654] [ERROR] error - Error: Invalid login: 535 Authentication failed
+    at SMTPConnection._formatError (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:1542:34)
+    at SMTPConnection.<anonymous> (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:546:26)
+    at SMTPConnection._processResponse (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:953:20)
+    at SMTPConnection._onData (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\nodemailer\lib\smtp-connection\index.js:193:44)
+    at TLSSocket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Authentication failed',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-02-28T11:37:28.257] [ERROR] error - Error: usuarios validation failed: apellido: Path `apellido` is required.
+    at ValidationError.inspect (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\error\validation.js:48:26)
+    at formatValue (node:internal/util/inspect:790:19)
+    at inspect (node:internal/util/inspect:350:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2241:40)
+    at Object.format (node:internal/util/inspect:2098:10)
+    at basicLayout (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\layouts.js:64:57)
+    at app (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\appenders\file.js:76:23)
+    at C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    apellido: ValidatorError: Path `apellido` is required.
+        at validate (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\schematype.js:1330:13)
+        at SchemaString.SchemaType.doValidate (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\schematype.js:1314:7)
+        at C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\document.js:2746:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'apellido',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'usuarios validation failed'
+}
+[2023-02-28T11:40:21.106] [ERROR] error - Error: usuarios validation failed: apellido: Path `apellido` is required.
+    at ValidationError.inspect (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\error\validation.js:48:26)
+    at formatValue (node:internal/util/inspect:790:19)
+    at inspect (node:internal/util/inspect:350:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2241:40)
+    at Object.format (node:internal/util/inspect:2098:10)
+    at basicLayout (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\layouts.js:64:57)
+    at app (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\appenders\file.js:76:23)
+    at C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    apellido: ValidatorError: Path `apellido` is required.
+        at validate (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\schematype.js:1330:13)
+        at SchemaString.SchemaType.doValidate (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\schematype.js:1314:7)
+        at C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\document.js:2746:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'apellido',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'usuarios validation failed'
+}
+[2023-02-28T11:42:14.278] [ERROR] error - Error: usuarios validation failed: apellido: Path `apellido` is required.
+    at ValidationError.inspect (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\error\validation.js:48:26)
+    at formatValue (node:internal/util/inspect:790:19)
+    at inspect (node:internal/util/inspect:350:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2241:40)
+    at Object.format (node:internal/util/inspect:2098:10)
+    at basicLayout (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\layouts.js:64:57)
+    at app (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\appenders\file.js:76:23)
+    at C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\log4js\lib\log4js.js:42:21) {
+  errors: {
+    apellido: ValidatorError: Path `apellido` is required.
+        at validate (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\schematype.js:1330:13)
+        at SchemaString.SchemaType.doValidate (C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\schematype.js:1314:7)
+        at C:\Users\Facu\Desktop\Ultima Entrega\Tercera-entrega-backend\node_modules\mongoose\lib\document.js:2746:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'apellido',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'usuarios validation failed'
+}
