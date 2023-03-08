@@ -1,6 +1,6 @@
 const Daos = require("../models/daos/factoryDb");
-const nodemailerConfig = require("../configs/nodemailerConfig");
-const twilioConfig = require("../configs/twilioConfig");
+// const nodemailerConfig = require("../configs/nodemailerConfig");
+// const twilioConfig = require("../configs/twilioConfig");
 const { darFecha } = require("../helpers/helpersFecha");
 
 //Logs
@@ -60,26 +60,26 @@ const createOrderService = async (idCarrito, idUser, dir, email) => {
       };
 
       
-      const mailOptions = {
-        from: "Servidor node.js",
-        to: process.env.AVISO_EMAIL,
-        subject: "Nuevo pedido de " + email,
-        html: "Productos solicitados <br>" + JSON.stringify(ptosFinal, null, 2),
-      };
+      // const mailOptions = {
+      //   from: "Servidor node.js",
+      //   to: process.env.AVISO_EMAIL,
+      //   subject: "Nuevo pedido de " + email,
+      //   html: "Productos solicitados <br>" + JSON.stringify(ptosFinal, null, 2),
+      // };
       const info = await nodemailerConfig.sendMail(mailOptions);
       //Envio whatsapp al administrador
-      const whpoptions = {
-        body: "Productos: " + JSON.stringify(ptosFinal, null, 2),
-        from: process.env.WSP_FROM,
-        to: process.env.WSP_TO //req.user.telefono -> pero no manda porque no se como registrar todos los cel de ante mano
-      };
-      const message = await twilioConfig.messages.create(whpoptions);
-      //Envio de mensaje al cliente
-      const sms = await twilioConfig.messages.create({
-        body: 'Nuevo pedido desde la web',
-        from: process.env.SMS_FROM,
-        to: process.env.SMS_TO
-      });
+      // const whpoptions = {
+      //   body: "Productos: " + JSON.stringify(ptosFinal, null, 2),
+      //   from: process.env.WSP_FROM,
+      //   to: process.env.WSP_TO //req.user.telefono -> pero no manda porque no se como registrar todos los cel de ante mano
+      // };
+      // const message = await twilioConfig.messages.create(whpoptions);
+      // //Envio de mensaje al cliente
+      // const sms = await twilioConfig.messages.create({
+      //   body: 'Nuevo pedido desde la web',
+      //   from: process.env.SMS_FROM,
+      //   to: process.env.SMS_TO
+      // });
 
       
 
