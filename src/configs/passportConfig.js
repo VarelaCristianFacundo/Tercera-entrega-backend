@@ -6,7 +6,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const fs = require("fs");
 //Configs y helpers
-// const nodemailerConfig = require("../configs/nodemailerConfig");
+const nodemailerConfig = require("../configs/nodemailerConfig");
 const ENV = require("../configs/enviromentConfig")
 const { darFecha } = require("../helpers/helpersFecha");
 const Daos = require("../models/daos/factoryDb");
@@ -84,16 +84,16 @@ passport.use(
       });
 
       //Envio de mail al administrador de la pagina
-      // const mailOptions = {
-      //   from: "Servidor node.js",
-      //   to: ENV.adminMail,
-      //   subject: "Nuevo registro",
-      //   html: "Datos del nuevo usuario <br>" + JSON.stringify(userNew),
-      // };
+      const mailOptions = {
+        from: "Servidor node.js",
+        to: ENV.adminMail,
+        subject: "Nuevo registro",
+        html: "Datos del nuevo usuario <br>" + JSON.stringify(userNew),
+      };
       // await nodemailerConfig.sendMail(mailOptions);
 
-      // //TODO OK retorno done con el usuario
-      // return done(null, userNew);
+      //TODO OK retorno done con el usuario
+      return (null, userNew);
     }
   )
 );

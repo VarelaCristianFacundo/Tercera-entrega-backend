@@ -14,6 +14,7 @@ function renderChat(){
        
         tabla.innerHTML="";
         for (const chat of data.messages) {
+            console.log(chat)
             let fila = document.createElement('tr');
             let aux1 = document.createElement('td');            
             let color="green"
